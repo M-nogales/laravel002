@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('alumno_materia', function (Blueprint $table) {
             $table->id('alumno_materia_id');
-            $table->unsignedInteger('alumno_id');
-            $table->unsignedInteger('materias_id');
+            $table->foreignId('alumno_id')->references("alumno")->on("id");
+            $table->foreignId('materias_id')->references("materias")->on("id");
             $table->timestamps();
         });
     }
