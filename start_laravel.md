@@ -4,3 +4,5 @@ php artisan migration
 php artisan make:model Nota -m
 php artisan make:Controller NotesController
 @csrf para modificar ddbb poner en formularios
+composer update (.env update)
+composer install
